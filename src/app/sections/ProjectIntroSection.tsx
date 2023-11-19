@@ -1,5 +1,4 @@
 import Banner from "../components/Banner";
-import { DATABASE_ID, TOKEN } from "../config/page";
 
 const ProjectIntroSection = async () => {
   const projects = await getData();
@@ -27,7 +26,7 @@ async function getData() {
       "accept": "application/json",
       "Notion-Version": "2022-06-28",
       "content-type": "application/json",
-      "Authorization": `Bearer ${TOKEN}`,
+      "Authorization": `Bearer ${process.env.NOTION_TOKEN}`,
     },
     body: JSON.stringify({
       sorts: [
@@ -41,7 +40,7 @@ async function getData() {
   };
 
   const res = await fetch(
-    `https://api.notion.com/v1/databases/${DATABASE_ID}/query`,
+    `https://api.notion.com/v1/databases/${process.env.NOTION_DATABASE_ID}/query`,
     options
   );
   if (!res.ok) {

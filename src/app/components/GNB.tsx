@@ -10,7 +10,7 @@ const GNB = () => {
           href="/"
           className="flex title-font font-semibold items-center text-yellow-500 mb-4 md:mb-0"
         >
-          <span className="ml-3 text-2xl">Portfolio</span>
+          <span className="ml-3 text-2xl">My Portfolio</span>
         </Link>
         <nav className="md:ml-auto flex flex-wrap items-center font-semibold text-lg justify-center">
           <Link

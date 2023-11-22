@@ -6,8 +6,8 @@ const Projects = async () => {
   const projects = await getData();
   return (
     <div className="text-center">
-      <Banner textSize={"text-3xl"}>Projects</Banner>
-      <div className="m-3 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
+      <Banner textSize={"text-3xl text-yellow-500"}>Projects</Banner>
+      <div className="m-3 flex flex-wrap justify-evenly">
         {projects &&
           projects.results.map((aProject: any, index: number) => {
             return (

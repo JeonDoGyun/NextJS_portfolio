@@ -1,6 +1,6 @@
-import React from "react";
 import ProjectItem from "./ProjectItem";
 import Banner from "../components/Banner";
+import imageUrls from "./imageURL";
 
 const Projects = async () => {
   const projects = await getData();
@@ -8,10 +8,16 @@ const Projects = async () => {
     <div className="text-center">
       <Banner textSize={"text-3xl"}>Projects</Banner>
       <div className="m-3 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
-        {projects.results.map((aProject: any, index: number) => (
-          // eslint-disable-next-line react/jsx-key
-          <ProjectItem key={aProject.id} data={aProject} />
-        ))}
+        {projects &&
+          projects.results.map((aProject: any, index: number) => {
+            return (
+              <ProjectItem
+                key={aProject.id}
+                data={aProject}
+                imageUrl={imageUrls[index]}
+              />
+            );
+          })}
       </div>
     </div>
   );

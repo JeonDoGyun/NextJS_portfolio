@@ -1,28 +1,27 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const ProjectItem = ({ data }: any) => {
+const ProjectItem = async ({ data, imageUrl }: any) => {
   const title = data.properties.Name.title[0].plain_text;
   const description = data.properties.Description.rich_text[0]?.plain_text;
   const githubUrl = data.properties.Github.rich_text[0]?.href;
-  const imageSrc = data.cover?.file?.url || data.cover?.external?.url;
   const tags = data.properties.Tag.multi_select;
 
   return (
-    <div className="flex flex-col m-3 rounded-xl border-2 border-yellow-500 min-w-[320px] min-h-[500px]">
-      {/* next.config.js 파일에서 수정 필요 */}
+    <div className="flex flex-col m-3 rounded-xl border-4 border-yellow-500 max-h-[600px]">
       <Image
-        src={imageSrc}
-        className="rounded-t-xl bg-slate-700"
-        width="200"
+        src={imageUrl}
+        className="rounded-md dark:bg-gray-100 min-h-[200px]"
+        width="100"
         height="100"
         alt={title}
+        quality={100}
         layout="responsive"
         objectFit="none"
-        quality={100}
       />
       <div className="h-full">
-        <h1 className="m-2 p-6 bg-slate-700 rounded-md">{title}</h1>
+        <h1 className="p-6 bg-slate-700 rounded-md">{title}</h1>
+        <h3 className="my-1 p-6 bg-slate-700 rounded-md">{description}</h3>
         <div className="flex flex-wrap items-start mt-2 justify-center">
           {tags.map((aTag: any) => (
             <span
@@ -33,9 +32,8 @@ const ProjectItem = ({ data }: any) => {
             </span>
           ))}
         </div>
-        <h3 className="m-2 p-6 bg-slate-700 rounded-md">{description}</h3>
         <Link
-          className="flex justify-end px-4"
+          className="flex justify-end items-end px-4 py-2"
           href={githubUrl ? githubUrl : "Not found"}
         >
           <svg

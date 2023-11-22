@@ -3,9 +3,9 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className=" body-font">
-      <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-        <p className="text-sm text-center sm:text-left">
+    <footer className="body-font w-[95vw]">
+      <div className="container mx-auto py-6 px-5 flex flex-wrap flex-col sm:flex-row font-semibold">
+        <p className="text-lg text-center sm:text-left">
           Created by JeonDoGyun
           <Link
             href="https://github.com/JeonDoGyun"
@@ -17,14 +17,14 @@ const Footer = () => {
           </Link>
         </p>
         <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
-          <Link href="https://github.com/JeonDoGyun" className="ml-3 ">
+          <Link href="https://github.com/JeonDoGyun" className="ml-3">
             <svg
               fill="currentColor"
               stroke="currentColor"
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="0"
-              className="w-5 h-5"
+              className="w-7 h-7"
               viewBox="0 0 24 24"
             >
               <path
@@ -40,7 +40,7 @@ const Footer = () => {
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="2"
-              className="w-5 h-5"
+              className="w-7 h-7"
               viewBox="0 0 24 24"
             >
               <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />

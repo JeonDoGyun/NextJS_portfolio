@@ -22,6 +22,17 @@ const config: Config = {
         lg: "4px 4px 8px var(--tw-shadow-color)",
         xl: "4px 4px 16px var(--tw-shadow-color)",
       },
+      keyframes: {
+        typingCursor: {
+          from: {
+            borderRight: "2px solid white",
+          },
+          to: { borderRight: "2px solid black" },
+        },
+      },
+      animation: {
+        typingCursor: "typingCursor 1s ease-in-out 0ms 2",
+      },
     },
   },
   plugins: [

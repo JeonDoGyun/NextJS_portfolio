@@ -24,9 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className}`}>
         <GNB />
-        <div className="">
-          <StartingSection>{children}</StartingSection>
-        </div>
+        <StartingSection>{children}</StartingSection>
         <Footer />
       </body>
     </html>

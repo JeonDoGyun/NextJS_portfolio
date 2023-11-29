@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 
 interface BannerProps {
   textSize: string;
@@ -7,8 +7,8 @@ interface BannerProps {
 
 const Banner = ({ textSize, children }: BannerProps) => {
   return (
-    <div className={`${textSize} font-semibold`}>
-      <span>{children}</span>
+    <div className={`${textSize} text-shadow-lg font-bold shadow-yellow-500`}>
+      <h1>{children}</h1>
     </div>
   );
 };

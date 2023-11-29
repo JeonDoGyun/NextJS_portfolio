@@ -1,8 +1,16 @@
-const StartingSection = () => {
+import "./backgroundLayoutStyle.scss";
+
+const StartingSection = ({ children }: any) => {
   return (
-    <section className="flex flex-col justify-center items-center h-screen">
-      <div>JEON DO GYUN PORTFOLIO</div>
-      <div>애니메이션 넣어서 안 심심하게 만들기</div>
+    <section className="container mx-auto">
+      <div className="page-bg"></div>
+      <div className="animation-wrapper">
+        <div className="particle particle-1"></div>
+        <div className="particle particle-2"></div>
+        <div className="particle particle-3"></div>
+        <div className="particle particle-4"></div>
+      </div>
+      {children}
     </section>
   );
 };

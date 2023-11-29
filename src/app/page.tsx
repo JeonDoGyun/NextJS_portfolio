@@ -1,14 +1,11 @@
 import IntroSection from "./sections/IntroSection";
-import StartingSection from "./sections/StartingSection";
 import StrengthSection from "./sections/StrengthSection";
 
 const Home = () => {
   return (
-    <main>
-      <StartingSection />
+    <main className="flex flex-col justify-center items-center">
       <IntroSection />
       <StrengthSection />
-      {/* <ProjectIntroSection /> */}
     </main>
   );
 };

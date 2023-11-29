@@ -1,14 +1,10 @@
 "use client";
 
-import { useTheme } from "next-themes";
 import Banner from "../components/Banner";
 
 const IntroSection = () => {
-  const { theme } = useTheme();
-  const hoverColorInfo =
-    theme !== "dark" ? "bg-yellow-400 text-black" : "bg-yellow-600 text-white";
   return (
-    <section className={`h-screen rounded-3xl ${hoverColorInfo}`}>
+    <section className="h-screen rounded-3xl text-white">
       <article className="introduction">
         <Banner textSize="text-4xl">안녕하세요!</Banner>
         <Banner textSize="text-2xl">
@@ -19,7 +15,7 @@ const IntroSection = () => {
         <Banner textSize="text-4xl">Info</Banner>
       </article>
       <article className="about-me">
-        <div className="grid grid-cols-3 w-[95%] mx-4">
+        <div className="grid grid-cols-3 mx-4">
           <div className="text-4xl col-span-1 flex flex-col text-center">
             <Banner textSize="text-4xl">About</Banner>
             <Banner textSize="text-4xl">Me</Banner>

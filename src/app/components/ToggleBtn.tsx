@@ -19,7 +19,7 @@ const ToggleBtn = () => {
           stroke="currentColor"
           className={
             theme !== "dark"
-              ? "visible w-5 h-5 hover:text-orange-500 fill-current"
+              ? "visible w-5 h-5 hover:text-orange-400 fill-current hover:pb-1 hover:h-6"
               : "invisible w-0 h-0"
           }
         >
@@ -37,7 +37,7 @@ const ToggleBtn = () => {
           stroke="currentColor"
           className={
             theme === "dark"
-              ? "visible w-5 h-5 hover:text-yellow-400 fill-current"
+              ? "visible w-5 h-5 hover:text-yellow-400 fill-current hover:pb-1 hover:h-6"
               : "invisible w-0 h-0"
           }
         >

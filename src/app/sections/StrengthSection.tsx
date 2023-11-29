@@ -60,26 +60,26 @@ const StrengthSection = () => {
   ];
 
   return (
-    <section className="">
+    <section className="text-white">
       <article className="skills flex flex-col gap-4">
         <Banner textSize="text-4xl">Skills</Banner>
         <div className="frontend-skill-tags">
-          <Banner textSize="text-2xl">Frontend</Banner>
-          <hr className="mb-2 border-2" />
+          <Banner textSize="text-2xl text-yellow-500">Frontend</Banner>
+          <hr className="mb-2 border-2 border-yellow-500" />
           {frontendTags.map((tag, index) => (
             <Tag key={index}>{tag}</Tag>
           ))}
         </div>
         <div className="version-control-skill-tags">
-          <Banner textSize="text-2xl">Version Control</Banner>
-          <hr className="mb-2 border-2" />
+          <Banner textSize="text-2xl text-yellow-500">Version Control</Banner>
+          <hr className="mb-2 border-2 border-yellow-500" />
           {versionControlTags.map((tag, index) => (
             <Tag key={index}>{tag}</Tag>
           ))}
         </div>
         <div className="communication-skill-tags">
-          <Banner textSize="text-2xl">Communication</Banner>
-          <hr className="mb-2 border-2" />
+          <Banner textSize="text-2xl text-yellow-500">Communication</Banner>
+          <hr className="mb-2 border-2 border-yellow-500" />
           <Tag>Figma</Tag>
         </div>
       </article>

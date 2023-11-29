@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="body-font w-[95vw]">
       <div className="container mx-auto py-6 px-5 flex flex-wrap flex-col sm:flex-row font-semibold">
-        <p className="text-lg text-center sm:text-left">
+        <p className="text-lg text-center sm:text-left text-white">
           Created by JeonDoGyun
           <Link
             href="https://github.com/JeonDoGyun"
@@ -17,7 +17,10 @@ const Footer = () => {
           </Link>
         </p>
         <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
-          <Link href="https://github.com/JeonDoGyun" className="ml-3">
+          <Link
+            href="https://github.com/JeonDoGyun"
+            className="ml-3 text-white"
+          >
             <svg
               fill="currentColor"
               stroke="currentColor"
@@ -33,7 +36,10 @@ const Footer = () => {
               />
             </svg>
           </Link>
-          <Link href="https://www.instagram.com/j_dgn08/" className="ml-3">
+          <Link
+            href="https://www.instagram.com/j_dgn08/"
+            className="ml-3 text-white"
+          >
             <svg
               fill="none"
               stroke="currentColor"

@@ -1,6 +1,5 @@
 "use client";
 
-import { useTheme } from "next-themes";
 import { ReactNode } from "react";
 
 interface TagProps {
@@ -8,15 +7,8 @@ interface TagProps {
 }
 
 const Tag = ({ children }: TagProps) => {
-  const { theme } = useTheme();
-  const hoverColorInfo =
-    theme === "dark"
-      ? "hover:bg-white hover:text-black"
-      : "hover:bg-gray-300 hover:text-white";
   return (
-    <span
-      className={`inline-block px-2 py-1 text-lg font-bold text-center border-2 rounded-md ${hoverColorInfo}`}
-    >
+    <span className="inline-block px-2 py-1 text-lg font-bold border-white text-center border-2 rounded-md hover:text-yellow-500 hover:border-yellow-500">
       {children}
     </span>
   );

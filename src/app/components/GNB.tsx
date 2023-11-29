@@ -1,6 +1,4 @@
 import Link from "next/link";
-import React from "react";
-import ToggleBtn from "./ToggleBtn";
 
 const GNB = () => {
   return (
@@ -33,8 +31,6 @@ const GNB = () => {
           >
             Contacts
           </Link>
-
-          <ToggleBtn />
         </nav>
       </div>
     </header>

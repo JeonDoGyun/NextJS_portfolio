@@ -23,8 +23,8 @@ const ProjectItem = async ({ data, imageUrl }: any) => {
         <h2 className="p-3 font-bold text-xl text-yellow-500 rounded-md">
           {title}
         </h2>
-        <h3 className="p-3">기간 ~ 기간 넣기</h3>
-        <h3 className="my-1 p-3 font-semibold text-md rounded-md text-left">
+        <h3 className="p-3 text-white">기간 ~ 기간 넣기</h3>
+        <h3 className="my-1 p-3 font-semibold text-md rounded-md text-left text-white mx-auto">
           {description}
         </h3>
         <div className="flex flex-wrap items-start mt-2 justify-center">
@@ -37,7 +37,7 @@ const ProjectItem = async ({ data, imageUrl }: any) => {
             </span>
           ))}
         </div>
-        <div className="text-right">
+        <div className="text-right text-white">
           <Link
             className="inline-block px-4 py-2"
             href={githubUrl ? githubUrl : "Not found"}
